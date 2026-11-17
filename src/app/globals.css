@@ -1294,7 +1294,7 @@ button:hover:not(:disabled) .arrow {
 }
 .save-word:hover {
   color: var(--paper);
-  background: var(--navy);
+  background: var(--ink);
   text-decoration: none;
 }
 .study-card h1 {

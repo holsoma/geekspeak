@@ -104,6 +104,8 @@ GitHub sign-in, cloud saving and the leaderboard require a dedicated OAuth app a
 
 ## Development checks
 
+The [quality review](docs/QUALITY.md) records the independent scores, browser measurements and remaining limitations.
+
 ```powershell
 npm test
 npm run build

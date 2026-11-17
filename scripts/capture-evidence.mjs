@@ -18,6 +18,7 @@ try {
     { path: "/", selector: ".hero-copy .button", name: "start" },
     { path: "/packs", selector: ".pack-card", name: "pack" },
     { path: "/wordbook", selector: ".word-row", name: "term" },
+    { path: "/learn/llm-basics/1", selector: ".save-word", name: "save-term" },
   ]) {
     await page.goto("http://127.0.0.1:4400" + target.path);
     await page.waitForTimeout(2000);
@@ -47,7 +48,7 @@ try {
     ["lesson-study", "lesson"],
     ["progress", "progress"],
   ]) {
-    await sharp(`.jury/flows/${from}.png`)
+    await sharp(`${process.env.TEST_OUTPUT || ".jury/flows"}/${from}.png`)
       .resize({ width: 1440 })
       .toFile(`docs/screenshots/${to}.png`);
   }

@@ -24,7 +24,7 @@ function LessonBody({
   terms,
   test,
 }: Props & { test: boolean }) {
-  const { progress, update, ready, user } = useProgress();
+  const { progress, update, ready, user, authEnabled, sync } = useProgress();
   const id = `${packId}/${lesson}`;
   const [stage, setStage] = useState<"study" | "quiz" | "done">(
     test ? "quiz" : "study",
@@ -187,9 +187,9 @@ function LessonBody({
             </Link>
           </div>
           <p className="small muted">
-            {user
-              ? "Your progress is saved to your account."
-              : "Saved on this device. Sign in with GitHub to keep it across devices."}
+            {authEnabled && !user
+              ? `${sync}. Sign in with GitHub to keep it across devices.`
+              : sync}
           </p>
         </section>
       </div>
