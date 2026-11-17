@@ -1,6 +1,7 @@
 .git
 .jury
 .shots
+.sites-preview
 node_modules
 docs
 tests

@@ -19,9 +19,9 @@ Learn the AI, coding and cloud terms that come up in real conversations. One sma
 
 [Features](#features) · [Setup guide](docs/SETUP.md) · [Contribute](CONTRIBUTING.md) · [Report an issue](https://github.com/holsoma/geekspeak/issues)
 
-[Open the private website preview](https://geekspeak.htdcvdl.chatgpt.site)
+[Open Geekspeak](https://geekspeak-sigma.vercel.app)
 
-The preview is available to its owner through ChatGPT Sites. Packs, quizzes, the wordbook and device progress work there. GitHub sign-in, cloud progress and shared scores require the server deployment described below.
+Geekspeak runs on Vercel with a dedicated Neon database. Guest learning is available now. GitHub sign-in is awaiting OAuth app registration; the cloud saving and leaderboard services are implemented and integration-tested.
 
 </div>
 

@@ -5,11 +5,11 @@
   "scripts": {
     "dev": "next dev -p 4400",
     "build": "next build",
-    "build:guest": "node scripts/build-guest.mjs",
     "start": "next start",
     "lint": "eslint",
     "test": "node --import tsx --test tests/*.test.ts",
     "test:e2e": "node --import tsx scripts/e2e.ts",
+    "test:accounts": "node --import tsx scripts/test-accounts.mts",
     "db:migrate": "node --env-file-if-exists=.env.local scripts/migrate.mjs"
   },
   "dependencies": {

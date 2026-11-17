@@ -2,10 +2,12 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { authConfigured, auth, signIn, signOut } from "@/auth";
 import { GitHubIcon, Arrow, Logo } from "@/components/Icons";
-import { GuestAccount } from '@/components/GuestAccount';
+import { GuestAccount } from "@/components/GuestAccount";
 export const metadata: Metadata = {
-  title: authConfigured ? 'Save your place' : 'Guest progress',
-  description: authConfigured ? 'Sign in with GitHub to save your Geekspeak learning progress across devices.' : 'Learn every Geekspeak pack as a guest. This browser keeps your learned terms, saved words and completed lessons.',
+  title: authConfigured ? "Save your place" : "Guest progress",
+  description: authConfigured
+    ? "Sign in with GitHub to save your Geekspeak learning progress across devices."
+    : "Learn every Geekspeak pack as a guest. This browser keeps your learned terms, saved words and completed lessons.",
   robots: { index: false, follow: true },
 };
 export default async function SignInPage({
@@ -13,7 +15,7 @@ export default async function SignInPage({
 }: {
   searchParams: Promise<{ error?: string }>;
 }) {
-  if(process.env.NEXT_PUBLIC_GUEST_ONLY === 'true' || !authConfigured) return <GuestAccount/>;
+  if (!authConfigured) return <GuestAccount />;
   const params = await searchParams;
   const session = authConfigured ? await auth() : null;
   return (

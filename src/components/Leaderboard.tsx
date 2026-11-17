@@ -6,12 +6,9 @@ import { Arrow, Logo } from "./Icons";
 type Entry = { username: string; terms: number; xp: number };
 export function Leaderboard() {
   const [entries, setEntries] = useState<Entry[]>([]);
-  const [state, setState] = useState(
-    process.env.NEXT_PUBLIC_GUEST_ONLY === "true" ? "unavailable" : "loading",
-  );
+  const [state, setState] = useState("loading");
   const { user, authEnabled } = useProgress();
   async function load() {
-    if (process.env.NEXT_PUBLIC_GUEST_ONLY === "true") return;
     setState("loading");
     try {
       const response = await fetch("/api/leaderboard");

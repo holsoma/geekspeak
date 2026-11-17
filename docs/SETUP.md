@@ -40,7 +40,7 @@ npm run db:migrate
 
 The migration command applies numbered SQL files once, in a transaction. It creates `profiles` and `verified_terms`; request handlers never create or alter tables. The database role needs access only to the Geekspeak database. Browser code never receives its connection string.
 
-No production database has been provisioned by the source repository alone. Do not reuse another project's tables or credentials without reviewing the separation.
+The hosted Geekspeak project uses its own Neon database, `geekspeak-db`, in Singapore. A fresh installation of this repository needs its own database and credentials.
 
 ## Vercel
 
@@ -52,19 +52,11 @@ No production database has been provisioned by the source repository alone. Do n
 
 You can deploy the guest version without credentials. Do not describe GitHub sign-in or cloud saving as live until those checks pass. Preview deployments should use development credentials and their own callback origin; production-only OAuth callbacks will not work on arbitrary preview URLs.
 
-## Static guest preview
+## Production website
 
-The current [private preview](https://geekspeak.htdcvdl.chatgpt.site) is hosted through ChatGPT Sites. It contains all 200 terms and the full guest learning flow. Its progress stays in the browser. GitHub authentication, account saving and leaderboard participation are unavailable in this static version.
+Geekspeak is deployed from the main branch to [geekspeak-sigma.vercel.app](https://geekspeak-sigma.vercel.app). The Vercel project is `holsoma/geekspeak`, with Node.js 22 and functions in Singapore. Its dedicated Neon resource uses the free plan. Database credentials are supplied through Vercel's Neon integration; OAuth credentials and the session secret belong in Vercel's production environment variables.
 
-To build this version from the same application source:
-
-```powershell
-npm run build:guest -- https://YOUR-PREVIEW-ORIGIN
-```
-
-The build uses an isolated directory and writes static files to `.sites-preview/dist`. It does not modify the main application. The local Sites checkout has its own ignored `.openai/hosting.json` and source repository. Reuse its project ID when updating that deployment; do not create a replacement Site. The main repository remains the full Next.js application for Vercel.
-
-For browser checks against a locally served static export, set `TEST_URL`, `TEST_GUEST_ONLY=1` and optionally `TEST_OUTPUT`. This checks the guest features and metadata while excluding server-only API assertions.
+The former static export is no longer part of the application or its deployment workflow. All deployments use the complete Next.js server application.
 
 ## Verification
 
@@ -77,5 +69,7 @@ npm run test:e2e
 ```
 
 The browser runner uses Playwright Chromium or installed Microsoft Edge. Install Chromium with `npx playwright install chromium` when neither is available. Screenshots and reports go into ignored `.jury/` folders. Never use private account data for public screenshots.
+
+`npm run test:accounts` is an explicit integration check requiring `TEST_URL`, `DATABASE_URL` and `AUTH_SECRET`. It tests account isolation, persistent progress, answer scoring and leaderboard participation using two temporary test profiles, then removes those profiles and their scores. It does not verify the GitHub OAuth handshake; test that separately with a real sign-in. Do not run this command against another application's database.
 
 Use `npm audit --omit=dev` to assess runtime dependencies separately from build tools. At creation, npm reported a picomatch advisory in the ESLint development dependency tree, with no patched version available from the registry. It is not a shipped browser or server dependency. Do not accept an unrelated major-version downgrade from `npm audit fix --force`; review the upstream fix when available.

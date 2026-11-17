@@ -25,7 +25,7 @@ export function GuestAccount() {
           saved words and completed lessons in this browser.
         </p>
         <div className="notice compact-notice">
-          <strong>GitHub sign-in is not available in this preview.</strong>
+          <strong>Account saving is not configured on this installation.</strong>
           <p>
             You can learn every pack now. Your progress stays on this device.
           </p>

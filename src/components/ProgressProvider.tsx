@@ -84,16 +84,6 @@ export function ProgressProvider({ children }: { children: React.ReactNode }) {
   }, [save]);
   const refresh = useCallback(async () => {
     const epoch = ++generation.current;
-    if (process.env.NEXT_PUBLIC_GUEST_ONLY === "true") {
-      key.current = guestKey;
-      userRef.current = null;
-      setUser(null);
-      setAuthEnabled(false);
-      const stored = save(read(guestKey));
-      setReady(true);
-      if (stored) setSync("Saved on this device");
-      return;
-    }
     try {
       const response = await fetch("/api/profile", { cache: "no-store" });
       if (!response.ok) throw new Error();

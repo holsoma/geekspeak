@@ -1,6 +1,6 @@
 # Quality review
 
-Reviewed on 18 November 2026 against a local production build. This is an independent estimate using the jury skill rubric, not an Awwwards result.
+Reviewed on 18 November 2026 against the initial local production build. This is an independent estimate using the jury skill rubric, not an Awwwards result. The scores below describe that review snapshot; see the setup guide for the subsequent Vercel deployment.
 
 **Strict independent score: 7.53/10.** Design contributes 40%, Usability 30%, Creativity 20% and Content 10%.
 
@@ -32,7 +32,7 @@ The review led to corrections for accessible lesson labels, mobile lesson access
 
 ## Limits and remaining work
 
-GitHub OAuth, database persistence and real leaderboard participation are implemented in the server application but have not been verified against configured production services. The private Sites deployment is a guest-only export. No users or leaderboard scores are invented.
+At the time of this design review, GitHub OAuth, database persistence and real leaderboard participation were implemented but had not been verified against configured services. The later Vercel deployment uses the complete server application and a dedicated Neon database. No persistent demonstration users or leaderboard scores are included.
 
 The critic recommends carrying the pack artwork and colour into study, question and completion states; explaining mathematical summaries more directly; improving account-page spacing; and indicating leaderboard availability before navigation. These remain improvements, not completed changes.
 
