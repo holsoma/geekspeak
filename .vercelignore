@@ -1,0 +1,11 @@
+.git
+.jury
+.shots
+node_modules
+docs
+tests
+test-results
+playwright-report
+*.log
+.env*
+DESIGN.md
