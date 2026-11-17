@@ -111,7 +111,7 @@ function LessonBody({
   }
   if (!ready)
     return (
-      <div className="lesson-shell">
+      <div className="lesson-shell lesson-loading">
         <p role="status">Finding your place…</p>
       </div>
     );

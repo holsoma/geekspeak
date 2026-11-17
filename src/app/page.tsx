@@ -153,7 +153,7 @@ export default function Home() {
             </li>
             <li>
               <Check />
-              Optional GitHub login to keep your place
+              Your browser keeps your place between visits
             </li>
           </ul>
           <Link href="/packs" className="button primary">

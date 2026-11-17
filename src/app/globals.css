@@ -1244,6 +1244,9 @@ button:hover:not(:disabled) .arrow {
   padding: 35px var(--gutter) 80px;
   min-height: 700px;
 }
+.lesson-shell.lesson-loading {
+  min-height: 100svh;
+}
 .lesson-top {
   display: flex;
   justify-content: space-between;
@@ -1283,10 +1286,16 @@ button:hover:not(:disabled) .arrow {
   text-decoration: underline;
   text-underline-offset: 4px;
   font-size: 11px;
-  padding: 9px 0;
+  padding: 9px 12px;
+  border-radius: 3px;
+  transition:
+    color 160ms,
+    background-color 160ms;
 }
 .save-word:hover {
-  color: #a74421;
+  color: var(--paper);
+  background: var(--navy);
+  text-decoration: none;
 }
 .study-card h1 {
   font-size: 54px;
@@ -1537,6 +1546,11 @@ button:hover:not(:disabled) .arrow {
 .term-heading {
   padding: 36px 0;
   border-bottom: 1px solid var(--line);
+}
+.term-heading > .section-label {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
 }
 .term-heading h1 {
   font-size: clamp(45px, 6vw, 80px);
@@ -3049,8 +3063,16 @@ button:hover:not(:disabled) .arrow {
 }
 
 /* Keep practical reading comfortable at phone width. */
-.wordbook-pagination { display:flex; align-items:center; justify-content:space-between; gap:15px; margin-top:30px; }
-.wordbook-pagination > span { font-size:12px; }
+.wordbook-pagination {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  margin-top: 30px;
+}
+.wordbook-pagination > span {
+  font-size: 12px;
+}
 .idempotency-demo {
   background: var(--ink);
   color: var(--paper);

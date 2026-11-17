@@ -1,4 +1,5 @@
 import { chromium } from "playwright";
+import axe from "axe-core";
 import { mkdir, writeFile } from "node:fs/promises";
 import assert from "node:assert/strict";
 import { packs } from "../src/data/packs";
@@ -210,6 +211,7 @@ async function run() {
       .getByRole("heading", { name: "Good things come in packs." })
       .waitFor();
     const metadataEvidence = [];
+    const accessibilityEvidence = [];
     for (const path of [
       "/",
       "/packs",
@@ -227,6 +229,23 @@ async function run() {
         () => document.documentElement.scrollWidth > innerWidth + 1,
       );
       assert.equal(overflow, false, `Mobile overflow at ${path}`);
+      await phone.addScriptTag({ content: axe.source });
+      const accessibility = await phone.evaluate(async () => {
+        const result = await (window as any).axe.run(document);
+        return result.violations.map((v: any) => ({
+          id: v.id,
+          impact: v.impact,
+          count: v.nodes.length,
+        }));
+      });
+      assert.deepEqual(
+        accessibility.filter((v: any) =>
+          ["serious", "critical"].includes(v.impact),
+        ),
+        [],
+        `Accessibility failure at ${path}`,
+      );
+      accessibilityEvidence.push({ path, violations: accessibility });
       await phone.screenshot({
         path: `${out}/mobile-${path === "/" ? "home" : path.replaceAll("/", "-").slice(1)}.png`,
         fullPage: true,
@@ -279,6 +298,10 @@ async function run() {
       `${out}/metadata.json`,
       JSON.stringify(metadataEvidence, null, 2),
     );
+    await writeFile(
+      `${out}/accessibility.json`,
+      JSON.stringify(accessibilityEvidence, null, 2),
+    );
     assert.deepEqual(errors, []);
     await writeFile(
       `${out}/results.json`,
@@ -306,6 +329,7 @@ async function run() {
             "mobile navigation",
             "mobile overflow",
             "metadata and Open Graph images",
+            "no serious or critical accessibility violations",
             "first lesson action in phone viewport",
           ],
           errors,

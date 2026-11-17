@@ -32,7 +32,11 @@ export default async function LessonPage({
   if (!pack || !Number.isInteger(index) || index < 0 || index >= 5) notFound();
   return (
     <Suspense
-      fallback={<div className="lesson-shell">Preparing your lesson…</div>}
+      fallback={
+        <div className="lesson-shell lesson-loading">
+          Preparing your lesson…
+        </div>
+      }
     >
       <Lesson
         key={`${p.pack}/${p.lesson}`}

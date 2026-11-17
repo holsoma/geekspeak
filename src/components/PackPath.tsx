@@ -58,7 +58,7 @@ export function PackPath({ pack }: { pack: Pack }) {
                     <Link
                       href={`/learn/${id}?mode=test`}
                       className="text-link"
-                      aria-label={`Test out of lesson ${i + 1}: ${title}`}
+                      aria-label={`Know this already? Test out of lesson ${i + 1}: ${title}`}
                     >
                       Know this already? <Arrow />
                     </Link>
