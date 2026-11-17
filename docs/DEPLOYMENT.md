@@ -18,3 +18,7 @@ These integration checks verify the application after authentication. They do no
 Register the Geekspeak OAuth app with homepage `https://geekspeak-sigma.vercel.app` and callback `https://geekspeak-sigma.vercel.app/api/auth/callback/github`. Add `AUTH_GITHUB_ID` and `AUTH_GITHUB_SECRET` as production secrets, redeploy, then check a real GitHub sign-in and saved progress across browsers.
 
 The former static-export build and its public links have been removed from the repository. The complete server application is the only supported deployment.
+
+## Former hosting
+
+The old ChatGPT Site's application files were removed and its replacement handler returns HTTP 410 Gone for all paths. That retirement version was deployed successfully. The Sites connector does not expose permanent project deletion, so the retired Site entry may still appear in the owner's library until it is deleted there.
