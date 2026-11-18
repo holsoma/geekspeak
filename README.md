@@ -8,7 +8,7 @@
 
 ### Get the tech talk.
 
-Learn the AI, coding and cloud terms that come up in real conversations. One small pack at a time.
+Make sense of tech jargon. Learn the AI, coding and cloud terms that come up in everyday conversations, one small pack at a time.
 
 [![Checks](https://img.shields.io/github/actions/workflow/status/holsoma/geekspeak/checks.yml?branch=main&style=flat&label=Checks&labelColor=173548&color=ee855b)](https://github.com/holsoma/geekspeak/actions/workflows/checks.yml)
 [![200 terms](https://img.shields.io/badge/Useful_terms-200-ee855b?style=flat&labelColor=173548)](#the-packs)
@@ -21,11 +21,9 @@ Learn the AI, coding and cloud terms that come up in real conversations. One sma
 
 [Open GeekSpeak](https://geek-speak.vercel.app)
 
-GeekSpeak runs on Vercel with a dedicated Neon database. GitHub sign-in is enabled, and cloud saving and the optional leaderboard have passed production integration checks. The final real-account sign-in check is pending. You can also learn without an account.
+Learn as a guest, or sign in with GitHub to save your progress across devices and join the optional leaderboard.
 
 </div>
-
-## A look inside
 
 ![GeekSpeak home page](docs/screenshots/home.png)
 
@@ -113,7 +111,7 @@ npm run build
 npm run test:e2e
 ```
 
-The browser checks cover guest lessons, saved terms, retries, test-out, persistence and mobile navigation. Account integration checks use temporary encrypted test sessions to verify persistence, account separation, rejected unauthenticated and cross-origin writes, scoring and leaderboard participation. A real GitHub sign-in must also complete before the OAuth flow is described as verified. See the [deployment status](docs/DEPLOYMENT.md) for the latest results.
+The browser checks cover guest lessons, saved terms, retries, test-out, persistence and mobile navigation. Account integration checks use temporary encrypted test sessions to verify persistence, account separation, rejected unauthenticated and cross-origin writes, scoring and leaderboard participation. See the [deployment status](docs/DEPLOYMENT.md) for the latest results.
 
 ## Built with
 
