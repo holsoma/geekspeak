@@ -1,4 +1,5 @@
 import type { CSSProperties } from "react";
+import logo from "@/data/logo.json";
 export function Logo({
   className = "",
   title,
@@ -8,7 +9,7 @@ export function Logo({
 }) {
   return (
     <svg
-      viewBox="0 0 96 96"
+      viewBox={logo.viewBox}
       fill="none"
       className={className}
       aria-hidden={!title}
@@ -17,10 +18,10 @@ export function Logo({
       {title && <title>{title}</title>}
       <path
         fill="currentColor"
-        d="M16 84V67C8 55 8 40 11 29 15 13 27 7 40 8c18 1 27 12 25 28l9 13c2 4-1 7-8 7v9c0 8-5 13-15 13h-7v6H16Z"
+        d={logo.head}
       />
       <path
-        d="M79 36c8 8 8 20 0 28M87 25c13 14 13 36 0 50"
+        d={logo.waves}
         stroke="currentColor"
         strokeWidth="5"
         strokeLinecap="round"
