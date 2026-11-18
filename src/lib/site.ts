@@ -5,5 +5,5 @@ export const siteUrl = (
     : "http://localhost:4400")
 ).replace(/\/$/, "");
 export const description =
-  "Get the tech talk. Learn useful AI, coding and cloud terms in short, hands-on packs. Free, open source and without streaks.";
+  "Understand everyday tech jargon, from AI to coding and cloud computing, through short lessons, clear examples and quizzes. Free, open source and without streaks.";
 export const githubUrl = "https://github.com/holsoma/geekspeak";

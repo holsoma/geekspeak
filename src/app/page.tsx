@@ -44,7 +44,7 @@ export default function Home() {
           <p className="hero-description" data-enter>
             From “what’s a token?” to “that makes sense.”
             <br />
-            Learn the tech terms that come up in real life.
+            Understand everyday tech jargon.
             <br />
             One small pack at a time.
           </p>

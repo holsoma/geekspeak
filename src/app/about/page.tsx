@@ -5,7 +5,7 @@ import { githubUrl } from "@/lib/site";
 export const metadata: Metadata = {
   title: "About GeekSpeak",
   description:
-    "A useful tech vocabulary, built for curious people. Learn why GeekSpeak focuses on understanding, real examples and progress without pressure.",
+    "GeekSpeak helps you understand everyday tech jargon through short lessons, clear examples and questions about AI, coding and cloud computing.",
 };
 export default function About() {
   return (
@@ -18,8 +18,9 @@ export default function About() {
         You nod, and quietly add another word to the list of things to look up.
       </p>
       <p>
-        GeekSpeak is for that list. It brings together useful terms from AI,
-        programming and the systems behind everyday software. Each one gets a
+        GeekSpeak helps you make sense of everyday tech jargon. It brings
+        together useful terms from AI, programming and the systems behind
+        everyday software. Each one gets a
         plain explanation, a concrete example and a question that checks whether
         it makes sense.
       </p>
