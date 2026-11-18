@@ -26,6 +26,8 @@ Register a dedicated [GitHub OAuth app](https://github.com/settings/developers).
 https://YOUR-DEPLOYMENT/api/auth/callback/github
 ```
 
+For the application logo, upload [the transparent 512 px PNG](../public/brand/geekspeak-github-icon.png) and set the badge background to `#EE855B`. The image contains only the navy symbol, so there is no background edge to match. Regenerate the PNG from its SVG source with `node scripts/assets.mjs`.
+
 For development, use `http://localhost:4400/api/auth/callback/github` with the matching local environment URLs. The app requests `read:user`, not repository permissions. It stores the GitHub ID and username, not repository contents. Create a random `AUTH_SECRET` through a password manager or a secure local generator.
 
 All authentication variables and the database connection must be present before the sign-in button is enabled. Missing services produce a clear unavailable state while guest learning remains usable.
