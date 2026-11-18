@@ -52,8 +52,6 @@ GeekSpeak runs on Vercel with a dedicated Neon database. GitHub sign-in is enabl
 | **Review what needs work**     | Questions you miss return during the lesson. Your review list keeps track of terms that still need another look.                                |
 | **Join a small leaderboard**   | Opt in to show your GitHub username and points. Each distinct term answered correctly while signed in earns ten points once.                    |
 
-There are no streaks, hearts, speed bonuses, subscriptions or invented leaderboard entries.
-
 ## The packs
 
 | Pack                   | A few of the ideas inside                                                |
@@ -68,8 +66,6 @@ There are no streaks, hearts, speed bonuses, subscriptions or invented leaderboa
 | Data & databases       | SQL, transactions, ACID, indexes and Apache Spark.                       |
 | System design          | Idempotency, caching, queues, replication and failure handling.          |
 | AWS & cloud            | EC2, S3, Lambda, IAM, containers and Terraform.                          |
-
-Each pack contains 20 selected terms. This is a practical vocabulary, not an exhaustive dictionary or an official course syllabus.
 
 ## Get started
 
