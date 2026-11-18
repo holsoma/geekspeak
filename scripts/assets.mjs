@@ -14,4 +14,8 @@ header.writeUInt16LE(32, 12);
 header.writeUInt32LE(png.length, 14);
 header.writeUInt32LE(22, 18);
 await writeFile("src/app/favicon.ico", Buffer.concat([header, png]));
-console.log("Generated the favicon and Apple icon from the original SVG.");
+await sharp(await readFile("public/brand/geekspeak-github-icon.svg"))
+  .resize(512, 512)
+  .png()
+  .toFile("public/brand/geekspeak-github-icon.png");
+console.log("Generated the favicon, Apple icon and GitHub application icon from SVG sources.");
