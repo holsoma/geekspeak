@@ -21,7 +21,7 @@ Learn the AI, coding and cloud terms that come up in real conversations. One sma
 
 [Open GeekSpeak](https://geek-speak.vercel.app)
 
-GeekSpeak runs on Vercel with a dedicated Neon database. Guest learning is available now. GitHub sign-in is awaiting OAuth app registration; the cloud saving and leaderboard services are implemented and integration-tested.
+GeekSpeak runs on Vercel with a dedicated Neon database. GitHub sign-in is enabled, and cloud saving and the optional leaderboard have passed production integration checks. The final real-account sign-in check is pending. You can also learn without an account.
 
 </div>
 
@@ -97,7 +97,7 @@ npm run start -- --hostname 127.0.0.1 --port 4400
 
 </details>
 
-GitHub sign-in, cloud saving and the leaderboard require a dedicated OAuth app and a PostgreSQL connection. Until configured, the interface explains that account saving is unavailable. It does not simulate a login or publish guest scores. See the [setup and deployment guide](docs/SETUP.md).
+For your own deployment, GitHub sign-in, cloud saving and the leaderboard require a dedicated OAuth app and a PostgreSQL connection. Until configured, the interface explains that account saving is unavailable. It does not simulate a login or publish guest scores. See the [setup and deployment guide](docs/SETUP.md).
 
 ## Documentation
 
@@ -119,11 +119,11 @@ npm run build
 npm run test:e2e
 ```
 
-The browser checks cover guest lessons, saved terms, retries, test-out, persistence, mobile navigation, API ownership and cross-origin rejection. The signed-in path must also be checked against configured development OAuth and database services before it is described as verified.
+The browser checks cover guest lessons, saved terms, retries, test-out, persistence and mobile navigation. Account integration checks use temporary encrypted test sessions to verify persistence, account separation, rejected unauthenticated and cross-origin writes, scoring and leaderboard participation. A real GitHub sign-in must also complete before the OAuth flow is described as verified. See the [deployment status](docs/DEPLOYMENT.md) for the latest results.
 
 ## Built with
 
-[Next.js](https://nextjs.org/), [React](https://react.dev/) and [TypeScript](https://www.typescriptlang.org/). [GSAP](https://gsap.com/) handles the card motion. [Auth.js](https://authjs.dev/) handles GitHub sign-in, and [Neon PostgreSQL](https://neon.com/) stores account progress. The application is prepared for [Vercel](https://vercel.com/) deployment.
+[Next.js](https://nextjs.org/), [React](https://react.dev/) and [TypeScript](https://www.typescriptlang.org/). [GSAP](https://gsap.com/) handles the card motion. [Auth.js](https://authjs.dev/) handles GitHub sign-in, and [Neon PostgreSQL](https://neon.com/) stores account progress. The public website runs on [Vercel](https://vercel.com/).
 
 ## Credits and licence
 
