@@ -40,8 +40,6 @@ GeekSpeak runs on Vercel with a dedicated Neon database. GitHub sign-in is enabl
   </tr>
 </table>
 
-Screenshots show the working website with local guest progress. Select either preview to view the full page.
-
 ## Features
 
 |                                | What you can do                                                                                                                                 |
