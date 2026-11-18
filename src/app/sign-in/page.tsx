@@ -6,8 +6,8 @@ import { GuestAccount } from "@/components/GuestAccount";
 export const metadata: Metadata = {
   title: authConfigured ? "Save your place" : "Guest progress",
   description: authConfigured
-    ? "Sign in with GitHub to save your Geekspeak learning progress across devices."
-    : "Learn every Geekspeak pack as a guest. This browser keeps your learned terms, saved words and completed lessons.",
+    ? "Sign in with GitHub to save your GeekSpeak learning progress across devices."
+    : "Learn every GeekSpeak pack as a guest. This browser keeps your learned terms, saved words and completed lessons.",
   robots: { index: false, follow: true },
 };
 export default async function SignInPage({

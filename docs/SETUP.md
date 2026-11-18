@@ -1,6 +1,6 @@
 # Setup and deployment
 
-Geekspeak runs with Next.js, TypeScript and plain CSS. Guest learning needs no external service. GitHub identifies signed-in learners; Neon PostgreSQL stores their progress and verified answers.
+GeekSpeak runs with Next.js, TypeScript and plain CSS. Guest learning needs no external service. GitHub identifies signed-in learners; Neon PostgreSQL stores their progress and verified answers.
 
 ## Local development
 
@@ -11,7 +11,7 @@ Use Node.js 22 or later. Run `npm ci`, copy `.env.example` to `.env.local`, then
 | `NEXT_PUBLIC_SITE_URL`  | Full website origin, without a trailing slash. Used for canonical URLs and request-origin checks. |
 | `AUTH_URL`              | The same origin, used by Auth.js.                                                                 |
 | `AUTH_SECRET`           | A cryptographically random secret of at least 32 characters.                                      |
-| `AUTH_GITHUB_ID`        | Client ID of the Geekspeak GitHub OAuth app.                                                      |
+| `AUTH_GITHUB_ID`        | Client ID of the GeekSpeak GitHub OAuth app.                                                      |
 | `AUTH_GITHUB_SECRET`    | Client secret of that OAuth app. Server only.                                                     |
 | `DATABASE_URL`          | Pooled Neon PostgreSQL connection string. Server only.                                            |
 | `DATABASE_URL_UNPOOLED` | Optional direct connection for migrations.                                                        |
@@ -20,7 +20,7 @@ Use separate development and production credentials. A local origin must match t
 
 ## GitHub sign-in
 
-Register a dedicated [GitHub OAuth app](https://github.com/settings/developers). Use Geekspeak as its name and the deployment origin as its homepage. Register the exact callback:
+Register a dedicated [GitHub OAuth app](https://github.com/settings/developers). Use GeekSpeak as its name and the deployment origin as its homepage. Register the exact callback:
 
 ```text
 https://YOUR-DEPLOYMENT/api/auth/callback/github
@@ -32,15 +32,15 @@ All authentication variables and the database connection must be present before 
 
 ## Database
 
-Create a dedicated Neon project or database for Geekspeak. Set the connection variables, then run:
+Create a dedicated Neon project or database for GeekSpeak. Set the connection variables, then run:
 
 ```powershell
 npm run db:migrate
 ```
 
-The migration command applies numbered SQL files once, in a transaction. It creates `profiles` and `verified_terms`; request handlers never create or alter tables. The database role needs access only to the Geekspeak database. Browser code never receives its connection string.
+The migration command applies numbered SQL files once, in a transaction. It creates `profiles` and `verified_terms`; request handlers never create or alter tables. The database role needs access only to the GeekSpeak database. Browser code never receives its connection string.
 
-The hosted Geekspeak project uses its own Neon database, `geekspeak-db`, in Singapore. A fresh installation of this repository needs its own database and credentials.
+The hosted GeekSpeak project uses its own Neon database, `geekspeak-db`, in Singapore. A fresh installation of this repository needs its own database and credentials.
 
 ## Vercel
 
@@ -54,7 +54,7 @@ You can deploy the guest version without credentials. Do not describe GitHub sig
 
 ## Production website
 
-Geekspeak is deployed from the main branch to [geekspeak-sigma.vercel.app](https://geekspeak-sigma.vercel.app). The Vercel project is `holsoma/geekspeak`, with Node.js 22 and functions in Singapore. Its dedicated Neon resource uses the free plan. Database credentials are supplied through Vercel's Neon integration; OAuth credentials and the session secret belong in Vercel's production environment variables.
+GeekSpeak is deployed from the main branch to [geek-speak.vercel.app](https://geek-speak.vercel.app). The Vercel project is `holsoma/geekspeak`, with Node.js 22 and functions in Singapore. Its dedicated Neon resource uses the free plan. Database credentials are supplied through Vercel's Neon integration; OAuth credentials and the session secret belong in Vercel's production environment variables.
 
 The former static export is no longer part of the application or its deployment workflow. All deployments use the complete Next.js server application.
 

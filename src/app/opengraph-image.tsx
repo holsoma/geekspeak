@@ -1,6 +1,6 @@
 import { ImageResponse } from "next/og";
 export const dynamic = "force-static";
-export const alt = "Geekspeak. Tech talk. Now you get it.";
+export const alt = "GeekSpeak. Tech talk. Now you get it.";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 export default function Image() {
@@ -18,7 +18,7 @@ export default function Image() {
       }}
     >
       <div style={{ display: "flex", fontSize: 32, fontWeight: 700 }}>
-        geekspeak.
+        GeekSpeak.
       </div>
       <div
         style={{

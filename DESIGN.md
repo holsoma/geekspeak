@@ -1,4 +1,4 @@
-# Geekspeak
+# GeekSpeak
 
 ## Brief
 
@@ -6,7 +6,7 @@ An open-source learning website for the tech terms that come up in real conversa
 
 ## Concept
 
-Three directions considered: a translation desk (originality 4, fit 5, feasibility 5, portability 2), a collection of learning cards (3, 5, 5, 3), and a map of connected ideas (4, 4, 3, 3). The translation desk wins: Geekspeak turns a word you have heard into a sentence you understand. Learning cards support the central interaction.
+Three directions considered: a translation desk (originality 4, fit 5, feasibility 5, portability 2), a collection of learning cards (3, 5, 5, 3), and a map of connected ideas (4, 4, 3, 3). The translation desk wins: GeekSpeak turns a word you have heard into a sentence you understand. Learning cards support the central interaction.
 
 Idea: Turn tech talk into something you can explain.
 Metaphor: Conversation cards on a learning desk.

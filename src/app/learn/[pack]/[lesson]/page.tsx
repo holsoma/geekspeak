@@ -17,7 +17,7 @@ export async function generateMetadata({
   const pack = getPack(p.pack);
   return {
     title: pack?.lessons[Number(p.lesson) - 1] || "Lesson",
-    description: `Learn four useful terms from ${pack?.title || "Geekspeak"} through examples and short questions.`,
+    description: `Learn four useful terms from ${pack?.title || "GeekSpeak"} through examples and short questions.`,
     robots: { index: false, follow: true },
   };
 }

@@ -3,7 +3,7 @@ import { githubUrl } from "@/lib/site";
 export const metadata: Metadata = {
   title: "Privacy",
   description:
-    "What Geekspeak stores when you learn as a guest, sign in with GitHub or choose to join the leaderboard.",
+    "What GeekSpeak stores when you learn as a guest, sign in with GitHub or choose to join the leaderboard.",
 };
 export default function Privacy() {
   return (
@@ -11,7 +11,7 @@ export default function Privacy() {
       <span className="section-label">YOUR DATA, EXPLAINED</span>
       <h1>Privacy without the small print.</h1>
       <p className="lead">
-        Geekspeak stores the information needed to remember what you have
+        GeekSpeak stores the information needed to remember what you have
         learned. It has no advertising or behavioural analytics.
       </p>
       <h2>Learning as a guest</h2>

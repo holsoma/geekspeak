@@ -40,10 +40,10 @@ export function Header() {
   ];
   return (
     <header className="site-header">
-      <Link href="/" className="brand" aria-label="Geekspeak home">
+      <Link href="/" className="brand" aria-label="GeekSpeak home">
         <Logo />
         <span>
-          geekspeak<span className="brand-dot">.</span>
+          GeekSpeak<span className="brand-dot">.</span>
         </span>
       </Link>
       <button

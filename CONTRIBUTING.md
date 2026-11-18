@@ -1,4 +1,4 @@
-# Contributing to Geekspeak
+# Contributing to GeekSpeak
 
 Use UK English and direct explanations. Do not use em dashes. A definition should help someone understand a real conversation, not replace one unexplained word with another.
 

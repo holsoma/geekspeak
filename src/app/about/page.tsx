@@ -3,22 +3,22 @@ import Link from "next/link";
 import { Arrow, Logo } from "@/components/Icons";
 import { githubUrl } from "@/lib/site";
 export const metadata: Metadata = {
-  title: "About Geekspeak",
+  title: "About GeekSpeak",
   description:
-    "A useful tech vocabulary, built for curious people. Learn why Geekspeak focuses on understanding, real examples and progress without pressure.",
+    "A useful tech vocabulary, built for curious people. Learn why GeekSpeak focuses on understanding, real examples and progress without pressure.",
 };
 export default function About() {
   return (
     <article className="prose-page">
       <Logo className="prose-logo" />
-      <span className="section-label">WHY GEEKSPEAK EXISTS</span>
+      <span className="section-label">WHY GeekSpeak EXISTS</span>
       <h1>You shouldn’t need a dictionary to follow the conversation.</h1>
       <p className="lead">
         Someone mentions a coroutine. Someone else says “just use Terraform”.
         You nod, and quietly add another word to the list of things to look up.
       </p>
       <p>
-        Geekspeak is for that list. It brings together useful terms from AI,
+        GeekSpeak is for that list. It brings together useful terms from AI,
         programming and the systems behind everyday software. Each one gets a
         plain explanation, a concrete example and a question that checks whether
         it makes sense.
@@ -39,7 +39,7 @@ export default function About() {
       </p>
       <h2>Open to learn. Open to improve.</h2>
       <p>
-        The explanations and questions are written for Geekspeak, with links to
+        The explanations and questions are written for GeekSpeak, with links to
         original documentation. The project is free and open source. If an
         example is unclear or a definition needs correcting, you can report it
         on GitHub.

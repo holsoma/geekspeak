@@ -35,7 +35,7 @@ export default async function PackPage({
         >
           <div className={`pack-detail-art pack-${pack.colour}`}>
             <PackArt symbol={pack.symbol} />
-            <span>THE GEEKSPEAK COLLECTION</span>
+            <span>THE GeekSpeak COLLECTION</span>
           </div>
         </ViewTransition>
         <div>

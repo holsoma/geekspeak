@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Page not found",
   description:
-    "This page could not be found. Return to Geekspeak learning packs.",
+    "This page could not be found. Return to GeekSpeak learning packs.",
   robots: { index: false, follow: true },
 };
 import { Logo, Arrow } from "@/components/Icons";

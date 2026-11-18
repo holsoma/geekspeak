@@ -14,7 +14,7 @@ export function Footer() {
         </Link>
       </div>
       <div className="footer-wordmark" aria-hidden="true">
-        geekspeak<span>.</span>
+        GeekSpeak<span>.</span>
       </div>
       <div className="footer-bottom">
         <span>

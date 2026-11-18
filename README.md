@@ -1,10 +1,10 @@
 <div align="center">
 
 <a href="#get-started">
-  <img src="src/app/icon.svg" alt="Geekspeak logo" width="88" height="88" />
+  <img src="src/app/icon.svg" alt="GeekSpeak logo" width="88" height="88" />
 </a>
 
-# Geekspeak
+# GeekSpeak
 
 ### Get the tech talk.
 
@@ -19,15 +19,15 @@ Learn the AI, coding and cloud terms that come up in real conversations. One sma
 
 [Features](#features) · [Setup guide](docs/SETUP.md) · [Contribute](CONTRIBUTING.md) · [Report an issue](https://github.com/holsoma/geekspeak/issues)
 
-[Open Geekspeak](https://geekspeak-sigma.vercel.app)
+[Open GeekSpeak](https://geek-speak.vercel.app)
 
-Geekspeak runs on Vercel with a dedicated Neon database. Guest learning is available now. GitHub sign-in is awaiting OAuth app registration; the cloud saving and leaderboard services are implemented and integration-tested.
+GeekSpeak runs on Vercel with a dedicated Neon database. Guest learning is available now. GitHub sign-in is awaiting OAuth app registration; the cloud saving and leaderboard services are implemented and integration-tested.
 
 </div>
 
 ## A look inside
 
-![Geekspeak home page](docs/screenshots/home.png)
+![GeekSpeak home page](docs/screenshots/home.png)
 
 <table>
   <tr>
@@ -131,4 +131,4 @@ Original code, explanations, questions and SVG artwork use the [MIT licence](LIC
 
 [TechTerms](https://techterms.com/) informed the dictionary and quiz functionality. [Table Tales](https://tabletales.crz.studio/) and [House of Giants](https://houseofgiants.com/) informed the visual references. Their code, artwork and definitions are not included.
 
-Geekspeak is not affiliated with those sites, GitHub, AWS, the referenced software projects or any educational institution. Technical explanations link to their sources; third-party documentation retains its own terms.
+GeekSpeak is not affiliated with those sites, GitHub, AWS, the referenced software projects or any educational institution. Technical explanations link to their sources; third-party documentation retains its own terms.

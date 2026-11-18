@@ -19,21 +19,21 @@ const body = Manrope({
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: "Geekspeak. Get the tech talk.",
-    template: "%s | Geekspeak",
+    default: "GeekSpeak. Get the tech talk.",
+    template: "%s | GeekSpeak",
   },
   description,
   alternates: { canonical: "./" },
   openGraph: {
     type: "website",
-    siteName: "Geekspeak",
-    title: "Geekspeak. Get the tech talk.",
+    siteName: "GeekSpeak",
+    title: "GeekSpeak. Get the tech talk.",
     description,
     images: ["/opengraph-image"],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Geekspeak. Get the tech talk.",
+    title: "GeekSpeak. Get the tech talk.",
     description,
     images: ["/opengraph-image"],
   },

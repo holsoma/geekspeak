@@ -25,7 +25,7 @@ export const { handlers, auth, signIn, signOut } = NextAuth({
               const response = await fetch("https://api.github.com/user", {
                 headers: {
                   Authorization: `Bearer ${tokens.access_token}`,
-                  "User-Agent": "Geekspeak",
+                  "User-Agent": "GeekSpeak",
                 },
                 cache: "no-store",
               });

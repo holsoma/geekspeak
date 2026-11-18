@@ -167,7 +167,7 @@ export default function Home() {
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "WebApplication",
-            name: "Geekspeak",
+            name: "GeekSpeak",
             url: siteUrl,
             description,
             applicationCategory: "EducationalApplication",
