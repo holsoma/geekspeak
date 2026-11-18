@@ -51,6 +51,9 @@ try {
     await sharp(`${process.env.TEST_OUTPUT || ".jury/flows"}/${from}.png`)
       .resize({ width: 1440 })
       .toFile(`docs/screenshots/${to}.png`);
+    await sharp(`docs/screenshots/${to}.png`)
+      .resize({ width: 1440, height: 1000, fit: "cover", position: "north" })
+      .toFile(`docs/screenshots/${to}-preview.png`);
   }
   await writeFile(`${output}/evidence.json`, JSON.stringify(evidence, null, 2));
   console.log(JSON.stringify(evidence));

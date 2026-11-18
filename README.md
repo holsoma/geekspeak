@@ -32,15 +32,15 @@ Geekspeak runs on Vercel with a dedicated Neon database. Guest learning is avail
 <table>
   <tr>
     <td width="50%" valign="top">
-      <a href="docs/screenshots/lesson.png"><img src="docs/screenshots/lesson.png" width="100%" alt="A lesson explains a term with a practical example" /></a>
+      <a href="docs/screenshots/lesson.png"><img src="docs/screenshots/lesson-preview.png" width="100%" alt="A lesson explains a term with a practical example" /></a>
     </td>
     <td width="50%" valign="top">
-      <a href="docs/screenshots/progress.png"><img src="docs/screenshots/progress.png" width="100%" alt="Personal progress shows learned terms, completed lessons and review items" /></a>
+      <a href="docs/screenshots/progress.png"><img src="docs/screenshots/progress-preview.png" width="100%" alt="Personal progress shows learned terms, completed lessons and review items" /></a>
     </td>
   </tr>
 </table>
 
-Screenshots show the working website with local guest progress.
+Screenshots show the working website with local guest progress. Select either preview to view the full page.
 
 ## Features
 
